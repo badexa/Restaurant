@@ -132,9 +132,9 @@ export default function RestaurantHomepage() {
                   </a>
                 </li>
                 <li className="mb-2 md:mb-0 md:mr-6">
-                  <a href="#menu" className="text-white hover:text-gray-300">
+                  <Link href="/categories" className="text-white hover:text-gray-300">
                     Menu
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-2 md:mb-0 md:mr-6">
                   <a href="#reservation" className="text-white hover:text-gray-300">
