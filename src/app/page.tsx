@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label"
 import Link from "next/link"
 import { ChevronDown, Facebook, Instagram, Twitter, MapPin, Phone, Mail, Clock } from "lucide-react"
 import { RefObject } from "react"
+import Image from 'next/image'
 
 export default function RestaurantHomepage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -232,7 +233,13 @@ export default function RestaurantHomepage() {
                   animate={isFeaturedInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
                 >
-                  <img src={dish.image} alt={dish.name} className="h-[275px] w-full object-cover" />
+                  <Image 
+                    src={dish.image} 
+                    alt={dish.name} 
+                    width={500}
+                    height={275}
+                    className="h-[275px] w-full object-cover" 
+                  />
                   <div className="p-4">
                     <h3 className="mb-2 text-xl font-semibold">{dish.name}</h3>
                     <p className="text-gray-600">{dish.price}</p>
